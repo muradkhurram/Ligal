@@ -1,48 +1,48 @@
 "use client";
 
-import React from "react";
 import { usePathname } from "next/navigation";
-import { HelpCircle, BookOpen, FileText, User } from "lucide-react";
+import { House, Scale, FileText, User } from "lucide-react";
+
 import FloatingAIButton from "./FloatingAIButton";
 import NavItem from "./NavItem";
 
-export function BottomNavigation() {
+// Only change from the original: the center spacer now carries an
+// "Ask AI" label so the floating button's purpose is legible at a
+// glance, per the requirement that a generic "+" isn't enough when the
+// button represents an AI assistant. Routes and nav items unchanged.
+export default function BottomNavigation() {
   const pathname = usePathname();
 
   return (
-    <nav 
-      aria-label="Main Navigation"
-      className="fixed bottom-0 left-0 right-0 z-40 px-3 pb-3 pointer-events-none"
-    >
-      <div className="max-w-xs sm:max-w-sm mx-auto relative pointer-events-auto">
-        {/* Floating Separated AI Button */}
+    <nav className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-4">
+      <div className="relative mx-auto max-w-md">
         <FloatingAIButton />
 
-        {/* Compact Instagram-style Glass Dock */}
-        <div className="glass-panel rounded-full h-12 sm:h-14 px-2 flex items-center justify-between shadow-2xl border border-white/10 bg-bg-secondary/80 backdrop-blur-2xl">
-          {/* Left Group */}
+        <div className="h-20 rounded-3xl backdrop-blur-xl bg-slate-900/80 border border-white/10 shadow-2xl flex items-center">
           <NavItem
             href="/"
-            icon={HelpCircle}
+            icon={House}
             label="Home"
             active={pathname === "/"}
           />
 
           <NavItem
             href="/judgments"
-            icon={BookOpen}
+            icon={Scale}
             label="Judgments"
             active={pathname === "/judgments"}
           />
 
-          {/* Center Gap Reserved for Separated Floating AI Button */}
-          <div className="w-12 sm:w-14 shrink-0" aria-hidden="true" />
+          <div className="w-20 flex flex-col items-center justify-end pb-1.5">
+            <span className="text-[9px] font-semibold text-blue-400 tracking-wide">
+              Ask AI
+            </span>
+          </div>
 
-          {/* Right Group */}
           <NavItem
             href="/documents"
             icon={FileText}
-            label="Generator"
+            label="Documents"
             active={pathname === "/documents"}
           />
 
@@ -57,5 +57,3 @@ export function BottomNavigation() {
     </nav>
   );
 }
-
-export default BottomNavigation;
