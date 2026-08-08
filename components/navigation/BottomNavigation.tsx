@@ -1,40 +1,48 @@
 "use client";
 
+import React from "react";
 import { usePathname } from "next/navigation";
-import { House, Scale, FileText, User } from "lucide-react";
-
+import { HelpCircle, BookOpen, FileText, User } from "lucide-react";
 import FloatingAIButton from "./FloatingAIButton";
 import NavItem from "./NavItem";
 
-export default function BottomNavigation() {
+export function BottomNavigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-4">
-      <div className="relative mx-auto max-w-md">
+    <nav 
+      aria-label="Main Navigation"
+      className="fixed bottom-0 left-0 right-0 z-40 px-3 pb-3 pointer-events-none"
+    >
+      <div className="max-w-xs sm:max-w-sm mx-auto relative pointer-events-auto">
+        {/* Floating Separated AI Button */}
         <FloatingAIButton />
 
-        <div className="h-20 rounded-3xl backdrop-blur-xl bg-slate-900/80 border border-white/10 shadow-2xl flex items-center">
+        {/* Compact Instagram-style Glass Dock */}
+        <div className="glass-panel rounded-full h-12 sm:h-14 px-2 flex items-center justify-between shadow-2xl border border-white/10 bg-bg-secondary/80 backdrop-blur-2xl">
+          {/* Left Group */}
           <NavItem
             href="/"
-            icon={House}
+            icon={HelpCircle}
             label="Home"
             active={pathname === "/"}
           />
 
           <NavItem
             href="/judgments"
-            icon={Scale}
+            icon={BookOpen}
             label="Judgments"
             active={pathname === "/judgments"}
           />
 
-          <div className="w-20" />
+          {/* Center Gap Reserved for Separated Floating AI Button */}
+          <div className="w-12 sm:w-14 shrink-0" aria-hidden="true" />
 
+          {/* Right Group */}
           <NavItem
             href="/documents"
             icon={FileText}
-            label="Documents"
+            label="Generator"
             active={pathname === "/documents"}
           />
 
@@ -49,3 +57,5 @@ export default function BottomNavigation() {
     </nav>
   );
 }
+
+export default BottomNavigation;
