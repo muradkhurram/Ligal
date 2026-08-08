@@ -35,7 +35,7 @@ export default function BottomNavigation() {
 
           <div className="w-20 flex flex-col items-center justify-end pb-1.5">
             <span className="text-[9px] font-semibold text-blue-400 tracking-wide">
-              Ask AI
+              
             </span>
           </div>
 
