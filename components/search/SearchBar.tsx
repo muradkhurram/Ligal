@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { Search, Sparkles, Command } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function SearchBar() {
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Keyboard shortcut (⌘K or /) to focus search bar quickly
+  // Keyboard shortcut (⌘K or Ctrl+K) to focus search bar quickly
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
@@ -54,7 +54,7 @@ export function SearchBar() {
           </kbd>
 
           {/* AI Feature Sparkle Badge */}
-          <div 
+          <div
             className="p-1.5 rounded-lg bg-brand-primary/20 text-brand-accent border border-brand-primary/30"
             title="AI Search Enabled"
           >

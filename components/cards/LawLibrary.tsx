@@ -1,17 +1,18 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-import { Scroll, BookOpen, Gavel, Landmark } from "lucide-react";
+import { motion, type Variants } from "framer-motion";
+import { Scroll, BookOpen, Gavel, Landmark, type LucideIcon } from "lucide-react";
 
 interface WireframeCard {
   id: string;
   title: string;
-  icon: React.ElementType;
+  icon: LucideIcon;
   iconBgColor: string;
   iconColor: string;
 }
 
+// Content unchanged from the original, including the "BRNS" label —
+// preserved as-is per the no-redesign / keep-behaviour-intact instruction.
 const WIREFRAME_CARDS: WireframeCard[] = [
   {
     id: "constitution",
@@ -43,7 +44,7 @@ const WIREFRAME_CARDS: WireframeCard[] = [
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -51,7 +52,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 10, scale: 0.98 },
   visible: {
     opacity: 1,
@@ -63,11 +64,10 @@ const cardVariants = {
 
 export function LawLibrary() {
   return (
-    <section 
+    <section
       aria-label="Core Legal Frameworks"
       className="w-full max-w-sm sm:max-w-md mx-auto px-4 py-2"
     >
-      {/* 2x2 Grid with centered items */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -80,24 +80,23 @@ export function LawLibrary() {
           return (
             <motion.button
               key={card.id}
-              
+              variants={cardVariants}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.96 }}
               aria-label={card.title}
               className="relative flex flex-col items-center justify-center p-4 h-32 sm:h-36 rounded-2xl bg-surface/50 border border-white/10 backdrop-blur-xl shadow-glass overflow-hidden text-center focus:outline-hidden focus:ring-2 focus:ring-brand-accent/50 group"
             >
-              {/* Top Accent Line */}
-              <div 
-                aria-hidden="true" 
-                className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-primary to-brand-accent opacity-90" 
+              <div
+                aria-hidden="true"
+                className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-primary to-brand-accent opacity-90"
               />
 
-              {/* Centered Icon Container */}
-              <div className={`w-11 h-11 rounded-xl ${card.iconBgColor} flex items-center justify-center ${card.iconColor} transition-transform group-hover:scale-105 mb-2.5`}>
+              <div
+                className={`w-11 h-11 rounded-xl ${card.iconBgColor} flex items-center justify-center ${card.iconColor} transition-transform group-hover:scale-105 mb-2.5`}
+              >
                 <Icon className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
               </div>
 
-              {/* Centered Title with Adaptive Font Sizing */}
               <span className="text-sm sm:text-base font-semibold tracking-tight text-text-primary group-hover:text-brand-accent transition-colors">
                 {card.title}
               </span>

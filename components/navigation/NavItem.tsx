@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 interface NavItemProps {
   href: string;
@@ -19,34 +19,17 @@ export default function NavItem({
   return (
     <Link
       href={href}
-      className="
-        flex
-        flex-col
-        items-center
-        justify-center
-
-        gap-1
-
-        flex-1
-
-        py-3
-
-        transition-all
-      "
+      className="flex flex-col items-center justify-center gap-1 flex-1 py-3 transition-all"
     >
       <Icon
         className={`w-5 h-5 ${
-          active
-            ? "text-blue-500"
-            : "text-slate-400"
+          active ? "text-blue-500" : "text-slate-400"
         }`}
       />
 
       <span
         className={`text-[11px] ${
-          active
-            ? "text-white"
-            : "text-slate-400"
+          active ? "text-white" : "text-slate-400"
         }`}
       >
         {label}
