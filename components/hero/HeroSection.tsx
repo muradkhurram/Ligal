@@ -33,7 +33,7 @@ export function HeroSection() {
           <Scale className="w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:rotate-[-6deg]" />
 
           <span className="absolute -top-1.5 -right-1.5 p-1 rounded-full bg-brand-primary text-white shadow-md">
-            <Sparkles className="w-3.5 h-3.5" />
+            
           </span>
         </div>
       </motion.div>
@@ -55,9 +55,9 @@ export function HeroSection() {
         transition={{ duration: 0.5, delay: 0.2, ease: EASE }}
         className="mt-3 text-base sm:text-lg text-text-secondary font-medium max-w-md mx-auto leading-relaxed"
       >
-        Understand the Law.{" "}
+        Understand the Law{" "}
         <span className="text-text-muted block sm:inline">
-          Protect Your Rights.
+          Protect Rights
         </span>
       </motion.p>
     </section>
