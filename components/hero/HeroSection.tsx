@@ -166,22 +166,28 @@ export function HeroSection() {
           initial={{ opacity: 0, x: 18, scale: 0.98 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.75, delay: 0.1, ease: EASE }}
-          className="
-            relative
-            z-10
-            h-[19rem]
-            w-[58%]
+      className="
+        relative
+        z-10
 
-            sm:h-[24rem]
-            sm:w-[62%]
+        h-[13rem]
+        w-[52%]
+        -mt-2
 
-            md:h-[27rem]
+        sm:h-[18rem]
+        sm:w-[58%]
+        sm:-mt-2
 
-            lg:h-[31rem]
-            lg:w-[66%]
+        md:h-[22rem]
+        md:w-[60%]
 
-            xl:h-[34rem]
-          "
+        lg:h-[31rem]
+        lg:w-[66%]
+        lg:mt-0
+
+        xl:h-[34rem]
+        xl:w-[68%]
+      "
         >
           {/* Dot-grid decoration, sits behind the image, peeking
               out on its left edge like the reference design */}
