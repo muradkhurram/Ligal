@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/hero/HeroSection";
 import { SearchBar } from "@/components/search/SearchBar";
 import { AskLegalAI } from "@/components/cards/AskLegalAI";
 import { LawLibrary } from "@/components/cards/LawLibrary";
-import { KnowYourRights } from "@/components/cards/KnowYourRights";
+import NewsSection from "@/components/home/NewsSection";
 import BottomNavigation from "@/components/navigation/BottomNavigation";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
 
       <LawLibrary />
 
-      <KnowYourRights />
+      <NewsSection />
 
       <BottomNavigation />
     </main>

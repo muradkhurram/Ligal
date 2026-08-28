@@ -27,19 +27,19 @@ const LAW_CARDS: LawCard[] = [
   {
     id: "bns",
     title: "BNS",
-    description: "Bharatiya Nyaya Sanhita",
+    description: "Criminal offences & penalties",
     icon: BookOpen,
   },
   {
     id: "bnss",
     title: "BNSS",
-    description: "Bharatiya Nagarik Suraksha Sanhita",
+    description: "Criminal procedure & justice",
     icon: Gavel,
   },
   {
-    id: "brns",
-    title: "BRNS",
-    description: "Bharatiya Sakshya Adhiniyam",
+    id: "bsa",
+    title: "BSA",
+    description: "Rules of evidence in court",
     icon: Landmark,
   },
 ];
