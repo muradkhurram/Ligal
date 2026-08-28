@@ -170,7 +170,7 @@ export function HeroSection() {
             z-10
             ml-auto
 
-            h-[12rem]
+            h-[18rem]
             w-[62%]
             -mt-1
 
