@@ -65,8 +65,8 @@ export function HeroSection() {
             <Scale
               aria-hidden="true"
               className="
-                h-8
-                w-8
+                h-10
+                w-10
                 stroke-[1.6]
 
                 sm:h-12
@@ -84,7 +84,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.02, ease: EASE }}
             className="
-              text-[0.55rem]
+              text-[0.7rem]
               font-semibold
               uppercase
               tracking-[0.16em]
@@ -106,7 +106,7 @@ export function HeroSection() {
             transition={{ duration: 0.55, delay: 0.08, ease: EASE }}
             className="
               font-serif
-              text-[2rem]
+              text-[2.5rem]
               font-bold
               leading-[1]
               tracking-tight
@@ -128,7 +128,7 @@ export function HeroSection() {
             transition={{ duration: 0.55, delay: 0.16, ease: EASE }}
             className="
               mt-2
-              text-[0.8rem]
+              text-[0.9.95rem]
               font-semibold
               leading-[1.4]
               tracking-[-0.005em]
@@ -170,7 +170,7 @@ export function HeroSection() {
             z-10
             ml-auto
 
-            h-[200rem]
+            h-[14rem]
             w-[62%]
             -mt-1
 
