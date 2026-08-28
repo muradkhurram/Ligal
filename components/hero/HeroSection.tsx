@@ -6,6 +6,14 @@ import { motion } from "framer-motion";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
+// Feathers all four edges of the photo evenly so its flat rectangular
+// canvas dissolves into the page background instead of showing a hard
+// cut line (this was the main bug — the old mask only faded near the
+// image's vertical center, so the bottom edge stayed a visible box).
+const IMAGE_EDGE_MASK =
+  "linear-gradient(to right, transparent, black 12%, black 88%, transparent), " +
+  "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)";
+
 export function HeroSection() {
   return (
     <section
@@ -13,25 +21,21 @@ export function HeroSection() {
       className="relative mx-auto w-full max-w-7xl overflow-hidden bg-[#fffaf3] px-4 pt-4 sm:px-6 lg:px-8"
     >
       <div
-  className="
-    relative
-    mx-auto
-    grid
-    w-full
-    grid-cols-1
-    items-center
-    gap-1
+        className="
+          relative
+          mx-auto
+          grid
+          w-full
+          grid-cols-1
+          items-center
+          gap-1
 
-    lg:grid-cols-[0.72fr_1.28fr]
-    lg:gap-0
-  "
->
-      
+          lg:grid-cols-[0.72fr_1.28fr]
+          lg:gap-0
+        "
+      >
         {/* =====================================================
-            LEFT SIDE
-            LiGal BRANDING
-            (top-aligned, compact on mobile so it sits flush
-            next to the image instead of stacking above it)
+            LEFT SIDE — BRANDING
         ====================================================== */}
 
         <motion.div
@@ -42,7 +46,7 @@ export function HeroSection() {
             relative
             z-20
             flex
-            w-[42%]
+            w-full
             shrink-0
             flex-col
             items-start
@@ -74,8 +78,7 @@ export function HeroSection() {
             />
           </div>
 
-          {/* Eyebrow label — small official-style tag above the
-              wordmark, common on gov./institutional legal sites */}
+          {/* Eyebrow label */}
           <motion.p
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
@@ -96,9 +99,7 @@ export function HeroSection() {
             Legal Ecosystem
           </motion.p>
 
-          {/* Ligal — plain, standard heading typeface (system serif
-              stack) rather than a stylised/branded display font,
-              so it reads as an official legal-site heading */}
+          {/* Ligal — standard serif heading, not a branded logotype */}
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -149,49 +150,45 @@ export function HeroSection() {
         </motion.div>
 
         {/* =====================================================
-            RIGHT SIDE
-            SUPREME COURT IMAGE + DOT-GRID DECORATION
+            RIGHT SIDE — SUPREME COURT IMAGE + DOT-GRID DECORATION
 
-            "Photo edit" applied here without swapping the asset:
-            - removed mix-blend-multiply (it was muting/greying the
-              image so it matched the cream backdrop; the target
-              design keeps the photo fully vivid/opaque)
-            - added saturate + contrast filter so the orange sun
-              and brick tones pop the way they do in the target
-            - added a dotted-grid pattern behind/left of the image,
-              matching the decorative motif in the target design
+            Sizing logic (this is the part that needed fixing):
+            - mobile: small, right-aligned (ml-auto) so it sits in
+              its own space next to the branding instead of
+              overlapping it, with even edge feathering so it reads
+              as one blended scene rather than a boxed-in photo
+            - lg and up: reverts to the original larger, non-shifted
+              desktop treatment
         ====================================================== */}
 
         <motion.div
           initial={{ opacity: 0, x: 18, scale: 0.98 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.75, delay: 0.1, ease: EASE }}
-className="
-  relative
-  z-10
-  ml-auto
+          className="
+            relative
+            z-10
+            ml-auto
 
-  h-[11rem]
-  w-[64%]
-  -mt-1
+            h-[12rem]
+            w-[62%]
+            -mt-1
 
-  sm:h-[16rem]
-  sm:w-[60%]
-  sm:ml-auto
-  sm:-mt-1
+            sm:h-[17rem]
+            sm:w-[58%]
+            sm:-mt-1
 
-  md:h-[21rem]
-  md:w-[58%]
-  md:ml-auto
+            md:h-[21rem]
+            md:w-[56%]
 
-  lg:h-[31rem]
-  lg:w-[66%]
-  lg:ml-0
-  lg:mt-0
+            lg:ml-0
+            lg:mt-0
+            lg:h-[31rem]
+            lg:w-[66%]
 
-  xl:h-[34rem]
-  xl:w-[68%]
-"
+            xl:h-[34rem]
+            xl:w-[68%]
+          "
         >
           {/* Dot-grid decoration, sits behind the image, peeking
               out on its left edge like the reference design */}
@@ -233,8 +230,8 @@ className="
             fill
             priority
             sizes="
-              (max-width: 640px) 60vw,
-              (max-width: 1024px) 55vw,
+              (max-width: 640px) 62vw,
+              (max-width: 1024px) 56vw,
               45vw
             "
             className="
@@ -246,14 +243,10 @@ className="
               contrast-[1.05]
             "
             style={{
-              // Feathers the photo's flat rectangular canvas edge
-              // (visible now that mix-blend-multiply is gone) so it
-              // dissolves into the page background instead of
-              // reading as a separate boxed-in photo.
-              maskImage:
-                "radial-gradient(100% 100% at 50% 42%, black 62%, transparent 96%)",
-              WebkitMaskImage:
-                "radial-gradient(100% 100% at 50% 42%, black 62%, transparent 96%)",
+              maskImage: IMAGE_EDGE_MASK,
+              WebkitMaskImage: IMAGE_EDGE_MASK,
+              maskComposite: "intersect",
+              WebkitMaskComposite: "source-in, source-in",
             }}
           />
         </motion.div>
