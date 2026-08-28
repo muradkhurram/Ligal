@@ -1,46 +1,46 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { Scroll, BookOpen, Gavel, Landmark, type LucideIcon } from "lucide-react";
+import {
+  Scroll,
+  BookOpen,
+  Gavel,
+  Landmark,
+  ArrowRight,
+  type LucideIcon,
+} from "lucide-react";
 
-interface WireframeCard {
+interface LawCard {
   id: string;
   title: string;
+  description: string;
   icon: LucideIcon;
-  iconBgColor: string;
-  iconColor: string;
 }
 
-// Content unchanged from the original, including the "BRNS" label —
-// preserved as-is per the no-redesign / keep-behaviour-intact instruction.
-const WIREFRAME_CARDS: WireframeCard[] = [
+const LAW_CARDS: LawCard[] = [
   {
     id: "constitution",
     title: "Constitution",
+    description: "The supreme law of India.",
     icon: Scroll,
-    iconBgColor: "bg-blue-500/20",
-    iconColor: "text-blue-400",
   },
   {
     id: "bns",
     title: "BNS",
+    description: "Bharatiya Nyaya Sanhita",
     icon: BookOpen,
-    iconBgColor: "bg-amber-500/20",
-    iconColor: "text-amber-400",
   },
   {
     id: "bnss",
     title: "BNSS",
+    description: "Bharatiya Nagarik Suraksha Sanhita",
     icon: Gavel,
-    iconBgColor: "bg-amber-700/20",
-    iconColor: "text-amber-500",
   },
   {
     id: "brns",
     title: "BRNS",
+    description: "Bharatiya Sakshya Adhiniyam",
     icon: Landmark,
-    iconBgColor: "bg-indigo-500/20",
-    iconColor: "text-indigo-400",
   },
 ];
 
@@ -48,58 +48,102 @@ const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.08 },
+    transition: {
+      staggerChildren: 0.08,
+    },
   },
 };
 
 const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 10, scale: 0.98 },
+  hidden: {
+    opacity: 0,
+    y: 12,
+  },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
-    transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
+    transition: {
+      duration: 0.35,
+      ease: [0.16, 1, 0.3, 1],
+    },
   },
 };
 
 export function LawLibrary() {
   return (
     <section
-      aria-label="Core Legal Frameworks"
-      className="w-full max-w-sm sm:max-w-md mx-auto px-4 py-2"
+      id="explore-law"
+      aria-labelledby="explore-law-heading"
+      className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8"
     >
+      {/* Section heading */}
+      <div className="mb-5 flex items-end justify-between gap-4 sm:mb-6">
+        <div className="min-w-0">
+          <h2
+            id="explore-law-heading"
+            className="text-xl font-bold tracking-tight text-[#103b2c] sm:text-2xl lg:text-[1.75rem]"
+          >
+            Explore Law
+          </h2>
+
+          <p className="mt-1 text-sm text-[#70716f] sm:text-[0.95rem]">
+            Browse important legal frameworks
+          </p>
+        </div>
+
+        <button
+          type="button"
+          className="flex shrink-0 items-center gap-1 text-sm font-bold text-[#ed6817] transition-opacity hover:opacity-75 sm:text-base"
+        >
+          <span>View all</span>
+          <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
+        </button>
+      </div>
+
+      {/* Cards */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="grid grid-cols-2 gap-3.5"
+        className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-4 lg:gap-5"
       >
-        {WIREFRAME_CARDS.map((card) => {
+        {LAW_CARDS.map((card) => {
           const Icon = card.icon;
 
           return (
             <motion.button
               key={card.id}
+              type="button"
               variants={cardVariants}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.96 }}
-              aria-label={card.title}
-              className="relative flex flex-col items-center justify-center p-4 h-32 sm:h-36 rounded-2xl bg-surface/50 border border-white/10 backdrop-blur-xl shadow-glass overflow-hidden text-center focus:outline-hidden focus:ring-2 focus:ring-brand-accent/50 group"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.985 }}
+              aria-label={`Open ${card.title}`}
+              className="group relative flex min-h-[8.5rem] w-full items-center gap-4 overflow-hidden rounded-[1.35rem] border border-[#eadfd3] bg-white p-5 text-left shadow-[0_8px_25px_rgba(84,52,26,0.055)] transition-shadow hover:shadow-[0_12px_30px_rgba(84,52,26,0.10)] sm:min-h-[10rem] sm:p-6"
             >
-              <div
+              {/* Orange top accent */}
+              <span
                 aria-hidden="true"
-                className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-primary to-brand-accent opacity-90"
+                className="absolute inset-x-0 top-0 h-1 bg-[#ed6817] opacity-0 transition-opacity group-hover:opacity-100"
               />
 
-              <div
-                className={`w-11 h-11 rounded-xl ${card.iconBgColor} flex items-center justify-center ${card.iconColor} transition-transform group-hover:scale-105 mb-2.5`}
-              >
-                <Icon className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
+              {/* Icon */}
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#fff0df] text-[#ed6817] sm:h-16 sm:w-16">
+                <Icon className="h-7 w-7 stroke-[1.8] sm:h-8 sm:w-8" />
               </div>
 
-              <span className="text-sm sm:text-base font-semibold tracking-tight text-text-primary group-hover:text-brand-accent transition-colors">
-                {card.title}
-              </span>
+              {/* Content */}
+              <div className="min-w-0 flex-1 pr-5">
+                <h3 className="text-base font-bold tracking-tight text-[#103b2c] sm:text-lg">
+                  {card.title}
+                </h3>
+
+                <p className="mt-1.5 max-w-sm text-sm leading-6 text-[#70716f] sm:text-[0.95rem]">
+                  {card.description}
+                </p>
+              </div>
+
+              {/* Arrow */}
+              <ArrowRight className="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#ed6817] transition-transform group-hover:translate-x-1 sm:right-5" />
             </motion.button>
           );
         })}
