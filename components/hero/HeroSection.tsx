@@ -13,19 +13,19 @@ export function HeroSection() {
       className="relative mx-auto w-full max-w-7xl overflow-hidden bg-[#fffaf3] px-4 pt-4 sm:px-6 lg:px-8"
     >
       <div
-        className="
-          relative
-          mx-auto
-          flex
-          w-full
-          flex-row
-          items-start
-          justify-between
-          gap-2
+  className="
+    relative
+    mx-auto
+    grid
+    w-full
+    grid-cols-1
+    items-center
+    gap-1
 
-          sm:gap-4
-          lg:gap-8
-        "
+    lg:grid-cols-[0.72fr_1.28fr]
+    lg:gap-0
+  "
+>
       >
         {/* =====================================================
             LEFT SIDE
@@ -166,28 +166,32 @@ export function HeroSection() {
           initial={{ opacity: 0, x: 18, scale: 0.98 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.75, delay: 0.1, ease: EASE }}
-      className="
-        relative
-        z-10
+className="
+  relative
+  z-10
+  ml-auto
 
-        h-[13rem]
-        w-[52%]
-        -mt-2
+  h-[11rem]
+  w-[64%]
+  -mt-1
 
-        sm:h-[18rem]
-        sm:w-[58%]
-        sm:-mt-2
+  sm:h-[16rem]
+  sm:w-[60%]
+  sm:ml-auto
+  sm:-mt-1
 
-        md:h-[22rem]
-        md:w-[60%]
+  md:h-[21rem]
+  md:w-[58%]
+  md:ml-auto
 
-        lg:h-[31rem]
-        lg:w-[66%]
-        lg:mt-0
+  lg:h-[31rem]
+  lg:w-[66%]
+  lg:ml-0
+  lg:mt-0
 
-        xl:h-[34rem]
-        xl:w-[68%]
-      "
+  xl:h-[34rem]
+  xl:w-[68%]
+"
         >
           {/* Dot-grid decoration, sits behind the image, peeking
               out on its left edge like the reference design */}
