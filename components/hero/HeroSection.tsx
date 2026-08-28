@@ -26,7 +26,7 @@ export function HeroSection() {
     lg:gap-0
   "
 >
-      >
+      
         {/* =====================================================
             LEFT SIDE
             LiGal BRANDING
