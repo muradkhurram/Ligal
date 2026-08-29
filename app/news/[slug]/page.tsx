@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Clock } from "lucide-react";
 import { notFound } from "next/navigation";
-import { getNewsBySlug, legalNews } from "@/data/news/news";
+import { getNewsBySlug, legalNews } from "@/data/news";
 
 interface NewsArticlePageProps {
   params: Promise<{
@@ -105,14 +105,14 @@ export default async function NewsArticlePage({
             </p>
           ))}
 
-          {news.sourceName && (
+          {news.source && (
             <div className="mt-10 rounded-2xl border border-orange-100 bg-orange-50 p-5">
               <p className="text-sm text-gray-600">
                 Original reporting:
               </p>
 
               <p className="mt-1 font-semibold text-gray-900">
-                {news.sourceName}
+                {news.source}
               </p>
             </div>
           )}

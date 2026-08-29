@@ -1,4 +1,4 @@
-import { getLatestNews } from "@/data/news/news";
+import { getLatestNews } from "@/data/news";
 import NewsCard from "@/components/news/NewsCard";
 import NewsHeader from "@/components/news/NewsHeader";
 

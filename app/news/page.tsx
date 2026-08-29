@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import NewsHeader from "@/components/news/NewsHeader";
 import NewsFilters from "@/components/news/NewsFilters";
 import NewsList from "@/components/news/NewsList";
-import { legalNews } from "@/data/news/news";
+import { legalNews } from "@/data/news";
 import type { NewsCategory } from "@/types/news";
 
 export default function NewsPage() {

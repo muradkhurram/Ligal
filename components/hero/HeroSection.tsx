@@ -225,7 +225,7 @@ export function HeroSection() {
           />
 
           <Image
-            src="/images/supreme-court.png"
+            src="/images/supreme-court-hero.png"
             alt="Supreme Court of India"
             fill
             priority

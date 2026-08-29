@@ -4,21 +4,37 @@ export type NewsCategory =
   | "Parliament"
   | "Government"
   | "Constitution"
-  | "Legal Updates";
+  | "Legal Updates"
+  | "Legal Analysis";
 
 export interface LegalNews {
   id: string;
+
   slug: string;
+
   title: string;
-  summary: string;
-  content: string[];
+
   category: NewsCategory;
+
+  date: string;
+
   publishedAt: string;
-  updatedAt?: string;
+
   readTime: string;
+
   author?: string;
+
+  summary: string;
+
   image?: string;
-  sourceName?: string;
+
+  source?: string;
+
   sourceUrl?: string;
+
   important?: boolean;
+
+  featured?: boolean;
+
+  content: string[];
 }
