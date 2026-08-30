@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -49,7 +50,9 @@ export default function RootLayout({
       className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}
     >
       <body className="bg-ink-950 text-parchment-50 antialiased selection:bg-brass-500 selection:text-white">
-        {children}
+    {children}
+    <Footer />
+
       </body>
     </html>
   );
