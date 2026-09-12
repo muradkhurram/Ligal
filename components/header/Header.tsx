@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Bell, X } from "lucide-react";
 
@@ -29,15 +30,15 @@ export function Header() {
         </button>
 
         {/* Notifications */}
-        <button
-          type="button"
-          aria-label="Notifications"
+        <Link
+          href="/news"
+          aria-label="Latest Legal News"
           className="relative flex h-12 w-12 items-center justify-center rounded-xl border border-transparent bg-white/50 text-[#17352b] transition-colors hover:bg-white sm:h-14 sm:w-14"
         >
           <Bell className="h-6 w-6 stroke-[1.7]" />
 
           <span className="absolute right-2.5 top-2.5 h-2.5 w-2.5 rounded-full bg-[#ed6817] sm:right-3 sm:top-3" />
-        </button>
+        </Link>
       </header>
 
       {/* Mobile menu */}
