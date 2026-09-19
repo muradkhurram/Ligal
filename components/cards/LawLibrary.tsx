@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import {
   Scroll,
@@ -15,6 +16,7 @@ interface LawCard {
   title: string;
   description: string;
   icon: LucideIcon;
+  href: string;
 }
 
 const LAW_CARDS: LawCard[] = [
@@ -23,24 +25,28 @@ const LAW_CARDS: LawCard[] = [
     title: "Constitution",
     description: "The supreme law of India.",
     icon: Scroll,
+    href: "/constitution",
   },
   {
     id: "bns",
     title: "BNS",
     description: "Criminal offences & penalties",
     icon: BookOpen,
+    href: "/laws/bns",
   },
   {
     id: "bnss",
     title: "BNSS",
     description: "Criminal procedure & justice",
     icon: Gavel,
+    href: "/laws/bnss",
   },
   {
     id: "bsa",
     title: "BSA",
     description: "Rules of evidence in court",
     icon: Landmark,
+    href: "/laws/bsa",
   },
 ];
 
@@ -111,40 +117,43 @@ export function LawLibrary() {
           const Icon = card.icon;
 
           return (
-            <motion.button
+            <motion.div
               key={card.id}
-              type="button"
               variants={cardVariants}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.985 }}
-              aria-label={`Open ${card.title}`}
-              className="group relative flex min-h-[8.5rem] w-full items-center gap-4 overflow-hidden rounded-[1.35rem] border border-[#eadfd3] bg-white p-5 text-left shadow-[0_8px_25px_rgba(84,52,26,0.055)] transition-shadow hover:shadow-[0_12px_30px_rgba(84,52,26,0.10)] sm:min-h-[10rem] sm:p-6"
             >
-              {/* Orange top accent */}
-              <span
-                aria-hidden="true"
-                className="absolute inset-x-0 top-0 h-1 bg-[#ed6817] opacity-0 transition-opacity group-hover:opacity-100"
-              />
+              <Link
+                href={card.href}
+                aria-label={`Open ${card.title}`}
+                className="group relative flex min-h-[8.5rem] w-full items-center gap-4 overflow-hidden rounded-[1.35rem] border border-[#eadfd3] bg-white p-5 text-left shadow-[0_8px_25px_rgba(84,52,26,0.055)] transition-shadow hover:shadow-[0_12px_30px_rgba(84,52,26,0.10)] sm:min-h-[10rem] sm:p-6"
+              >
+                {/* Orange top accent */}
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-0 top-0 h-1 bg-[#ed6817] opacity-0 transition-opacity group-hover:opacity-100"
+                />
 
-              {/* Icon */}
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#fff0df] text-[#ed6817] sm:h-16 sm:w-16">
-                <Icon className="h-7 w-7 stroke-[1.8] sm:h-8 sm:w-8" />
-              </div>
+                {/* Icon */}
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#fff0df] text-[#ed6817] sm:h-16 sm:w-16">
+                  <Icon className="h-7 w-7 stroke-[1.8] sm:h-8 sm:w-8" />
+                </div>
 
-              {/* Content */}
-              <div className="min-w-0 flex-1 pr-5">
-                <h3 className="text-base font-bold tracking-tight text-[#103b2c] sm:text-lg">
-                  {card.title}
-                </h3>
+                {/* Content */}
+                <div className="min-w-0 flex-1 pr-5">
+                  <h3 className="text-base font-bold tracking-tight text-[#103b2c] sm:text-lg">
+                    {card.title}
+                  </h3>
 
-                <p className="mt-1.5 max-w-sm text-sm leading-6 text-[#70716f] sm:text-[0.95rem]">
-                  {card.description}
-                </p>
-              </div>
+                  <p className="mt-1.5 max-w-sm text-sm leading-6 text-[#70716f] sm:text-[0.95rem]">
+                    {card.description}
+                  </p>
+                </div>
 
-              {/* Arrow */}
-              <ArrowRight className="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#ed6817] transition-transform group-hover:translate-x-1 sm:right-5" />
-            </motion.button>
+                {/* Arrow */}
+                <ArrowRight className="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#ed6817] transition-transform group-hover:translate-x-1 sm:right-5" />
+              </Link>
+            </motion.div>
           );
         })}
       </motion.div>

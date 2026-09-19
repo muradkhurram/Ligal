@@ -21,18 +21,7 @@ export function HeroSection() {
       className="relative mx-auto w-full max-w-7xl overflow-hidden bg-[#fffaf3] px-4 pt-4 sm:px-6 lg:px-8"
     >
       <div
-        className="
-          relative
-          mx-auto
-          grid
-          w-full
-          grid-cols-1
-          items-center
-          gap-1
-
-          lg:grid-cols-[0.72fr_1.28fr]
-          lg:gap-0
-        "
+  className="relative mx-auto grid w-full grid-cols-1 items-center gap-1 lg:grid-cols-[0.72fr_1.28fr] lg:gap-0"
       >
         {/* =====================================================
             LEFT SIDE — BRANDING
@@ -229,11 +218,7 @@ export function HeroSection() {
             alt="Supreme Court of India"
             fill
             priority
-            sizes="
-              (max-width: 640px) 62vw,
-              (max-width: 1024px) 56vw,
-              45vw
-            "
+            sizes="(max-width: 640px) 62vw, (max-width: 1024px) 56vw, 45vw"
             className="
               relative
               z-10
