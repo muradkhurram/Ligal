@@ -38,7 +38,7 @@ export function ConstitutionHero() {
           </h1>
 
           <p className="mt-6 max-w-md font-sans text-lg leading-relaxed text-[#52616b] sm:text-xl">
-            The supreme law of the Republic.
+            The supreme law of the Republic
           </p>
         </div>
 
