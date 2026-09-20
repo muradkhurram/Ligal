@@ -63,24 +63,50 @@ export function ConstitutionHero() {
           </p>
         </div>
 
-        {/* Parliament artwork */}
-        <div className="absolute bottom-0 right-[-80px] h-[270px] w-[590px] sm:right-[-50px] sm:h-[330px] sm:w-[700px] lg:right-[-20px] lg:h-[390px] lg:w-[780px]">
-          <Image
-            src="/images/constitution/constitution-of-india.jpg"
-            alt="Illustration of the Parliament of India"
-            fill
-            priority
-            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 65vw, 50vw"
-            className="object-contain object-bottom"
-          />
-        </div>
+        {/* Constitution / Parliament artwork */}
+<div
+  className="
+    pointer-events-none
+    absolute
+    bottom-0
+    right-[-45px]
+    h-[185px]
+    w-[390px]
 
-        {/* Fade into page */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#fffaf3] to-transparent"
-        />
-      </div>
+    sm:right-[-50px]
+    sm:h-[250px]
+    sm:w-[520px]
+
+    md:right-[-40px]
+    md:h-[300px]
+    md:w-[620px]
+
+    lg:right-[-20px]
+    lg:h-[390px]
+    lg:w-[780px]
+
+    xl:right-[-10px]
+    xl:h-[420px]
+    xl:w-[840px]
+  "
+>
+  <Image
+    src="/constitution/parliament/constitution-hero.png"
+    alt="Illustration of the Parliament of India"
+    fill
+    priority
+    sizes="
+      (max-width: 640px) 100vw,
+      (max-width: 768px) 90vw,
+      (max-width: 1024px) 75vw,
+      55vw
+    "
+    className="
+      object-contain
+      object-bottom
+    "
+  />
+</div>
     </section>
   );
 }
