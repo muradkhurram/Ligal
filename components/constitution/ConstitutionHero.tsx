@@ -66,7 +66,7 @@ export function ConstitutionHero() {
         {/* Parliament artwork */}
         <div className="absolute bottom-0 right-[-80px] h-[270px] w-[590px] sm:right-[-50px] sm:h-[330px] sm:w-[700px] lg:right-[-20px] lg:h-[390px] lg:w-[780px]">
           <Image
-            src="/constitution/parliament/constitution-hero.png"
+            src="/images/constitution/constitution-of-india.jpg"
             alt="Illustration of the Parliament of India"
             fill
             priority
