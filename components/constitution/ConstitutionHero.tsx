@@ -37,10 +37,12 @@ export function ConstitutionHero() {
             </span>
           </h1>
 
+        {/*
           <p className="mt-6 max-w-md font-sans text-lg leading-relaxed text-[#52616b] sm:text-xl">
             The supreme law of the Republic
           </p>
         </div>
+        */}
 
         {/* Right-side constitutional principles */}
         <div className="absolute right-6 top-24 z-10 hidden border-l border-[#c8bca9] pl-5 sm:block lg:right-12">
