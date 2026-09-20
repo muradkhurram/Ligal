@@ -87,7 +87,7 @@ export function ConstitutionHero() {
           "
         >
           <Image
-            src="/constitution/parliament/constitution-of-india.jpg"
+            src="/images/constitution/constitution-of-india.jpg"
             alt="Illustration of the Parliament of India"
             fill
             priority
