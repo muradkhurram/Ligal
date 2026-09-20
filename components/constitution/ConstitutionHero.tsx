@@ -36,6 +36,7 @@ export function ConstitutionHero() {
               of India
             </span>
           </h1>
+         </div>  
 
         {/*
           <p className="mt-6 max-w-md font-sans text-lg leading-relaxed text-[#52616b] sm:text-xl">
