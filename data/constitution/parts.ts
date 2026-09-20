@@ -36,10 +36,46 @@ export const constitutionParts: ConstitutionPart[] = [
     articles: "Article 51A",
     slug: "part-iva",
   },
+
+];
+
+export type ConstitutionSchedule = {
+  roman: string;
+  title: string;
+  description: string;
+  slug: string;
+};
+
+export const constitutionSchedules: ConstitutionSchedule[] = [
+  {
+    roman: "I",
+    title: "First Schedule",
+    description: "States and Union Territories",
+    slug: "schedule-i",
+  },
+  {
+    roman: "II",
+    title: "Second Schedule",
+    description: "Salaries and Allowances",
+    slug: "schedule-ii",
+  },
+  {
+    roman: "III",
+    title: "Third Schedule",
+    description: "Forms of Oaths and Affirmations",
+    slug: "schedule-iii",
+  },
+  {
+    roman: "IV",
+    title: "Fourth Schedule",
+    description: "Allocation of Seats in the Council of States",
+    slug: "schedule-iv",
+  },
   {
     roman: "V",
-    title: "The Union",
-    articles: "Articles 52–151",
-    slug: "part-v",
+    title: "Fifth Schedule",
+    description: "Administration and Control of Scheduled Areas and Scheduled Tribes",
+    slug: "schedule-v",
   },
+  
 ];
