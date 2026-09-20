@@ -4,7 +4,7 @@ export function ConstitutionHero() {
   return (
     <section className="relative overflow-hidden bg-[#fffaf3]">
       <div className="relative mx-auto min-h-[430px] w-full max-w-7xl overflow-hidden px-6 pt-8 sm:px-10 lg:min-h-[470px] lg:px-14">
-        
+
         {/* Decorative glow */}
         <div
           aria-hidden="true"
@@ -64,49 +64,39 @@ export function ConstitutionHero() {
         </div>
 
         {/* Constitution / Parliament artwork */}
-<div
-  className="
-    pointer-events-none
-    absolute
-    bottom-0
-    right-[-45px]
-    h-[185px]
-    w-[390px]
+        <div
+          className="
+            pointer-events-none
+            absolute
+            bottom-0
+            right-[-45px]
+            h-[185px]
+            w-[390px]
+            sm:right-[-50px]
+            sm:h-[250px]
+            sm:w-[520px]
+            md:right-[-40px]
+            md:h-[300px]
+            md:w-[620px]
+            lg:right-[-20px]
+            lg:h-[390px]
+            lg:w-[780px]
+            xl:right-[-10px]
+            xl:h-[420px]
+            xl:w-[840px]
+          "
+        >
+          <Image
+            src="/constitution/parliament/constitution-hero.png"
+            alt="Illustration of the Parliament of India"
+            fill
+            priority
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 75vw, 55vw"
+            className="object-contain object-bottom"
+          />
+        </div>
 
-    sm:right-[-50px]
-    sm:h-[250px]
-    sm:w-[520px]
-
-    md:right-[-40px]
-    md:h-[300px]
-    md:w-[620px]
-
-    lg:right-[-20px]
-    lg:h-[390px]
-    lg:w-[780px]
-
-    xl:right-[-10px]
-    xl:h-[420px]
-    xl:w-[840px]
-  "
->
-  <Image
-    src="/constitution/parliament/constitution-hero.png"
-    alt="Illustration of the Parliament of India"
-    fill
-    priority
-    sizes="
-      (max-width: 640px) 100vw,
-      (max-width: 768px) 90vw,
-      (max-width: 1024px) 75vw,
-      55vw
-    "
-    className="
-      object-contain
-      object-bottom
-    "
-  />
-</div>
+      </div>
     </section>
   );
 }
