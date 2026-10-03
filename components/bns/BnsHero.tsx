@@ -17,9 +17,9 @@ export function BnsHero() {
             Nyaya Sanhita
           </h1>
 
-          <p className="mt-4 font-serif text-[25px] text-[#59666b]">
+          {/*<p className="mt-4 font-serif text-[25px] text-[#59666b]">
             2023
-          </p>
+          </p>*/}
         </div>
 
         {/* Decorative legal document */}
