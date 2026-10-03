@@ -37,9 +37,9 @@ export function BnsHero() {
 
             <div className="mx-auto mt-5 h-px w-12 bg-[#f36f21]" />
 
-            <p className="mt-4 text-[10px] uppercase tracking-[0.2em] text-[#77736e]">
+            {/*<p className="mt-4 text-[10px] uppercase tracking-[0.2em] text-[#77736e]">
               2023
-            </p>
+            </p>*/}
           </div>
         </div>
 
