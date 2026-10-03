@@ -3,26 +3,16 @@ import Image from "next/image";
 export function BnsHero() {
   return (
     <section className="relative overflow-hidden px-4 pt-10 sm:px-6 sm:pt-14">
-      <div className="relative mx-auto max-w-[960px]">
+      <div className="relative mx-auto min-h-[430px] max-w-[960px] sm:min-h-[500px]">
 
         {/* HERO TEXT */}
-        <div
-          className="
-            relative z-20 pt-4
-            sm:max-w-[650px] sm:pt-8
-          "
-        >
+        <div className="relative z-20 max-w-[620px] pt-6 sm:pt-8">
+
           {/* Eyebrow */}
-          <div className="mb-5 flex items-center gap-3 sm:mb-6">
+          <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-7 bg-[#f36f21]" />
 
-            <p
-              className="
-                text-[9px] font-medium uppercase
-                tracking-[0.28em] text-[#6f6b66]
-                sm:text-[11px]
-              "
-            >
+            <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-[#6f6b66] sm:text-[11px]">
               The Criminal Law of India
             </p>
           </div>
@@ -31,12 +21,11 @@ export function BnsHero() {
           <h1
             className="
               font-serif
-              text-[48px]
+              text-[52px]
               font-semibold
-              leading-[0.94]
+              leading-[0.92]
               tracking-[-0.045em]
               text-[#123f32]
-
               sm:text-[68px]
               lg:text-[78px]
             "
@@ -45,6 +34,14 @@ export function BnsHero() {
             <br />
             Nyaya Sanhita
           </h1>
+
+          <p className="mt-5 font-serif text-[25px] text-[#59666b] sm:text-[28px]">
+            2023
+          </p>
+
+          <p className="mt-4 max-w-[360px] text-[13px] leading-6 text-[#77736e] sm:text-[14px]">
+            The principal law relating to offences and punishments in India.
+          </p>
         </div>
 
         {/* SOFT BACKGROUND CIRCLE */}
@@ -52,19 +49,16 @@ export function BnsHero() {
           className="
             pointer-events-none
             absolute
-            right-[8%]
+            right-[12%]
             top-[25px]
             z-0
-            h-[150px]
-            w-[150px]
+            h-[180px]
+            w-[180px]
             rounded-full
             bg-[#f8ead8]
             opacity-60
-
-            sm:right-[13%]
-            sm:top-[25px]
-            sm:h-[230px]
-            sm:w-[230px]
+            sm:h-[220px]
+            sm:w-[220px]
           "
         />
 
@@ -77,14 +71,12 @@ export function BnsHero() {
             right-[-80px]
             z-10
             hidden
-            w-[650px]
-
+            w-[600px]
             sm:block
-            sm:right-[-100px]
-            sm:w-[720px]
-
+            sm:right-[-90px]
+            sm:w-[680px]
             lg:right-[-80px]
-            lg:w-[780px]
+            lg:w-[720px]
           "
         >
           <Image
