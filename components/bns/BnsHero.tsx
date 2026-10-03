@@ -1,49 +1,77 @@
+import Image from "next/image";
+
 export function BnsHero() {
   return (
-    <section className="px-4 pt-10 pb-8 sm:px-6">
-      <div className="relative min-h-[280px] overflow-hidden">
-        <div className="relative z-10 pt-6">
-          <div className="mb-3 flex items-center gap-3">
+    <section className="relative overflow-hidden px-4 pt-10 sm:px-6 sm:pt-14">
+      <div className="relative min-h-[430px] sm:min-h-[520px]">
+
+        {/* Text */}
+        <div className="relative z-20 max-w-[620px] pt-6 sm:pt-8">
+
+          <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-7 bg-[#f36f21]" />
 
-            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-[#6f6b66]">
-              Criminal Law of India
+            <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-[#6f6b66] sm:text-[11px]">
+              The Criminal Law of India
             </p>
           </div>
 
-          <h1 className="font-serif text-[58px] font-semibold leading-[0.95] tracking-[-0.04em] text-[#123f32] sm:text-[72px]">
+          <h1 className="font-serif text-[52px] font-semibold leading-[0.92] tracking-[-0.045em] text-[#123f32] sm:text-[72px] lg:text-[82px]">
             Bharatiya
             <br />
             Nyaya Sanhita
           </h1>
 
-          {/*<p className="mt-4 font-serif text-[25px] text-[#59666b]">
+          <p className="mt-5 font-serif text-[25px] text-[#59666b] sm:text-[30px]">
             2023
-          </p>*/}
+          </p>
+
+          <p className="mt-4 max-w-[360px] text-[13px] leading-6 text-[#77736e] sm:text-[14px]">
+            The principal law relating to offences and punishments in India.
+          </p>
         </div>
 
-        {/* Decorative legal document */}
-        <div className="absolute right-[5%] top-4 hidden h-[260px] w-[210px] rotate-[-7deg] rounded-[4px] border border-[#d9d1c6] bg-[#f5efe5] shadow-sm sm:block">
-          <div className="absolute inset-[14px] border border-[#d8cbb8]" />
-
-          <div className="absolute left-8 right-8 top-14 text-center">
-            <p className="font-serif text-[13px] uppercase tracking-[0.12em] text-[#123f32]">
-              Bharatiya
-            </p>
-
-            <p className="mt-1 font-serif text-[18px] font-semibold text-[#123f32]">
-              Nyaya Sanhita
-            </p>
-
-            <div className="mx-auto mt-5 h-px w-12 bg-[#f36f21]" />
-
-            {/*<p className="mt-4 text-[10px] uppercase tracking-[0.2em] text-[#77736e]">
-              2023
-            </p>*/}
-          </div>
+        {/* BNS image */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            bottom-[-10px]
+            right-[-100px]
+            z-10
+            w-[650px]
+            sm:right-[-120px]
+            sm:w-[760px]
+            lg:right-[-100px]
+            lg:w-[820px]
+          "
+        >
+          <Image
+            src="/images/bns/bns-hero.jpg"
+            alt="Bharatiya Nyaya Sanhita"
+            width={885}
+            height={432}
+            priority
+            className="h-auto w-full object-contain"
+          />
         </div>
 
-        <div className="absolute right-[18%] top-10 h-36 w-36 rounded-full bg-[#f8ead8] opacity-60 sm:right-[15%]" />
+        {/* Soft background circle */}
+        <div
+          className="
+            absolute
+            right-[12%]
+            top-[25px]
+            z-0
+            h-[180px]
+            w-[180px]
+            rounded-full
+            bg-[#f8ead8]
+            opacity-60
+            sm:h-[230px]
+            sm:w-[230px]
+          "
+        />
       </div>
     </section>
   );
