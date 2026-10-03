@@ -6,9 +6,10 @@ export function BnsHero() {
       <div className="relative mx-auto max-w-[960px]">
 
         {/* HERO TEXT */}
-        <div className="relative z-20 pt-4 sm:max-w-[620px] sm:pt-8">
+        <div className="relative z-20 pt-4 sm:max-w-[650px] sm:pt-8">
 
-          <div className="mb-4 flex items-center gap-3">
+          {/* Eyebrow */}
+          <div className="mb-5 flex items-center gap-3 sm:mb-6">
             <span className="h-px w-7 bg-[#f36f21]" />
 
             <p className="text-[9px] font-medium uppercase tracking-[0.28em] text-[#6f6b66] sm:text-[11px]">
@@ -16,62 +17,64 @@ export function BnsHero() {
             </p>
           </div>
 
+          {/* Main title */}
           <h1
             className="
               font-serif
-              text-[48px]
+              text-[56px]
               font-semibold
-              leading-[0.94]
-              tracking-[-0.045em]
+              leading-[0.9]
+              tracking-[-0.05em]
               text-[#123f32]
-              sm:text-[68px]
-              lg:text-[78px]
+
+              sm:text-[72px]
+              lg:text-[82px]
             "
           >
             Bharatiya
             <br />
             Nyaya Sanhita
           </h1>
-
-          <p
-            className="
-              mt-5
-              font-serif
-              text-[24px]
-              text-[#59666b]
-              sm:text-[28px]
-            "
-          >
-            2023
-          </p>
-
-          <p
-            className="
-              mt-4
-              max-w-[350px]
-              text-[13px]
-              leading-6
-              text-[#77736e]
-              sm:text-[14px]
-            "
-          >
-            The principal law relating to offences and punishments in India.
-          </p>
         </div>
+
+        {/* SOFT BACKGROUND CIRCLE */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            right-[12%]
+            top-[30px]
+            z-0
+            h-[170px]
+            w-[170px]
+            rounded-full
+            bg-[#f8ead8]
+            opacity-60
+
+            sm:right-[13%]
+            sm:top-[25px]
+            sm:h-[230px]
+            sm:w-[230px]
+          "
+        />
 
         {/* DESKTOP / WINDOWS IMAGE */}
         <div
           className="
             pointer-events-none
             absolute
-            right-[-80px]
-            top-[35px]
+            bottom-[-5px]
+            right-[-95px]
             z-10
             hidden
             w-[650px]
+
             sm:block
-            lg:right-[-70px]
-            lg:w-[720px]
+            sm:right-[-120px]
+            sm:w-[760px]
+
+            lg:right-[-100px]
+            lg:w-[820px]
           "
         >
           <Image
