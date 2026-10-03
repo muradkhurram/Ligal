@@ -6,13 +6,23 @@ export function BnsHero() {
       <div className="relative mx-auto max-w-[960px]">
 
         {/* HERO TEXT */}
-        <div className="relative z-20 pt-4 sm:max-w-[650px] sm:pt-8">
-
+        <div
+          className="
+            relative z-20 pt-4
+            sm:max-w-[650px] sm:pt-8
+          "
+        >
           {/* Eyebrow */}
           <div className="mb-5 flex items-center gap-3 sm:mb-6">
             <span className="h-px w-7 bg-[#f36f21]" />
 
-            <p className="text-[9px] font-medium uppercase tracking-[0.28em] text-[#6f6b66] sm:text-[11px]">
+            <p
+              className="
+                text-[9px] font-medium uppercase
+                tracking-[0.28em] text-[#6f6b66]
+                sm:text-[11px]
+              "
+            >
               The Criminal Law of India
             </p>
           </div>
@@ -21,14 +31,14 @@ export function BnsHero() {
           <h1
             className="
               font-serif
-              text-[56px]
+              text-[48px]
               font-semibold
-              leading-[0.9]
-              tracking-[-0.05em]
+              leading-[0.94]
+              tracking-[-0.045em]
               text-[#123f32]
 
-              sm:text-[72px]
-              lg:text-[82px]
+              sm:text-[68px]
+              lg:text-[78px]
             "
           >
             Bharatiya
@@ -42,11 +52,11 @@ export function BnsHero() {
           className="
             pointer-events-none
             absolute
-            right-[12%]
-            top-[30px]
+            right-[8%]
+            top-[25px]
             z-0
-            h-[170px]
-            w-[170px]
+            h-[150px]
+            w-[150px]
             rounded-full
             bg-[#f8ead8]
             opacity-60
@@ -64,17 +74,17 @@ export function BnsHero() {
             pointer-events-none
             absolute
             bottom-[-5px]
-            right-[-95px]
+            right-[-80px]
             z-10
             hidden
             w-[650px]
 
             sm:block
-            sm:right-[-120px]
-            sm:w-[760px]
+            sm:right-[-100px]
+            sm:w-[720px]
 
-            lg:right-[-100px]
-            lg:w-[820px]
+            lg:right-[-80px]
+            lg:w-[780px]
           "
         >
           <Image
