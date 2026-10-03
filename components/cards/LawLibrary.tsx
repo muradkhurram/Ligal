@@ -32,7 +32,7 @@ const LAW_CARDS: LawCard[] = [
     title: "BNS",
     description: "Criminal offences & penalties",
     icon: BookOpen,
-    href: "/laws/bns",
+    href: "/bns",
   },
   {
     id: "bnss",
