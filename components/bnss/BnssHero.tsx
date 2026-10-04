@@ -40,7 +40,7 @@ export function BnssHero() {
         </div>
 
         {/* SOFT BACKGROUND CIRCLE */}
-        <div
+        {/*<div
           className="
             pointer-events-none
             absolute
@@ -55,7 +55,7 @@ export function BnssHero() {
             sm:h-[220px]
             sm:w-[220px]
           "
-        />
+        />*/}
 
         {/* DESKTOP / WINDOWS IMAGE */}
         <div
