@@ -29,21 +29,21 @@ const LAW_CARDS: LawCard[] = [
   },
   {
     id: "bns",
-    title: "BNS",
+    title: "BNS [IPC 1860]",
     description: "Criminal offences & penalties",
     icon: BookOpen,
     href: "/bns",
   },
   {
     id: "bnss",
-    title: "BNSS",
+    title: "BNSS [CrPC 1973]",
     description: "Criminal procedure & justice",
     icon: Gavel,
     href: "/laws/bnss",
   },
   {
     id: "bsa",
-    title: "BSA",
+    title: "BSA [IEA 1872]",
     description: "Rules of evidence in court",
     icon: Landmark,
     href: "/laws/bsa",
@@ -97,13 +97,13 @@ export function LawLibrary() {
           </p>
         </div>
 
-        <button
+        {/*<button
           type="button"
           className="flex shrink-0 items-center gap-1 text-sm font-bold text-[#ed6817] transition-opacity hover:opacity-75 sm:text-base"
         >
           <span>View all</span>
           <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
-        </button>
+        </button>*/}
       </div>
 
       {/* Cards */}
