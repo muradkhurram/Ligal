@@ -35,7 +35,7 @@ export const bnsChapters: BnsChapter[] = [
   {
     number: 4,
     roman: "IV",
-    title: "Of Abetment, Criminal",
+    title: "Of Abetment, Criminal Conspiracy and Attempt",
     description: "Abetment, criminal conspiracy and attempts to commit offences",
     sections: "Sections 45–62",
     href: "/bns/chapter-4",
@@ -83,7 +83,7 @@ export const bnsChapters: BnsChapter[] = [
   {
     number: 10,
     roman: "X",
-    title: "Of Offences Relating to Coin, Currency-Notes, Bank-Notes, and Government Stamps",
+    title: "Of Offences Relating to Coin, Currency-Notes",
     description: "Counterfeiting and offences involving currency and Government stamps",
     sections: "Sections 178–188",
     href: "/bns/chapter-10",
@@ -123,7 +123,7 @@ export const bnsChapters: BnsChapter[] = [
   {
     number: 15,
     roman: "XV",
-    title: "Of Offences Affecting the Public Health, Safety, Convenience, Decency and Morals",
+    title: "Of Offences Affecting the Public Health, Safety and Morals",
     description: "Offences affecting public health, safety and public morality",
     sections: "Sections 270–297",
     href: "/bns/chapter-15",
