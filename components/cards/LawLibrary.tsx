@@ -39,14 +39,14 @@ const LAW_CARDS: LawCard[] = [
     title: "BNSS | CrPC",
     description: "Criminal procedure & justice",
     icon: Gavel,
-    href: "/laws/bnss",
+    href: "/bnss",
   },
   {
     id: "bsa",
     title: "BSA | IEA",
     description: "Rules of evidence in court",
     icon: Landmark,
-    href: "/laws/bsa",
+    href: "/bsa",
   },
 ];
 
