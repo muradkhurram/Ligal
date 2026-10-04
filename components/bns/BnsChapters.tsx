@@ -13,9 +13,9 @@ export function BnsChapters() {
           </h2>
         </div>
 
-        <span className="mb-1 text-[13px] font-medium text-[#f36f21]">
+        {/*<span className="mb-1 text-[13px] font-medium text-[#f36f21]">
           20 Chapters →
-        </span>
+        </span>*/}
       </div>
 
       <div className="space-y-3">

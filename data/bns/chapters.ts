@@ -35,7 +35,7 @@ export const bnsChapters: BnsChapter[] = [
   {
     number: 4,
     roman: "IV",
-    title: "Of Abetment, Criminal Conspiracy and Attempt",
+    title: "Of Abetment, Criminal",
     description: "Abetment, criminal conspiracy and attempts to commit offences",
     sections: "Sections 45–62",
     href: "/bns/chapter-4",
