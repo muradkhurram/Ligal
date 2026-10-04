@@ -50,7 +50,7 @@ export default async function BnssChapterPage({
           <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
 
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#fff0dc] font-serif text-xl text-[#f06f1f]">
-              {chapter.roman}
+              {chapter.number}
             </div>
 
             <div>
