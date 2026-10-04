@@ -13,7 +13,7 @@ export function BnssHero() {
             <span className="h-px w-7 bg-[#f36f21]" />
 
             <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-[#6f6b66] sm:text-[11px]">
-              Criminal Procedure · Act No. 46 of 2023
+              Criminal Procedures
             </p>
           </div>
 
