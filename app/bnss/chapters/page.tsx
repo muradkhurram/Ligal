@@ -9,13 +9,13 @@ export default function BnssChaptersPage() {
 
       <div className="mx-auto max-w-5xl">
 
-        <Link
+        {/*<Link
           href="/bnss"
           className="mb-8 inline-flex items-center gap-2 text-xs font-medium text-[#0b7339]"
         >
           <ArrowLeft size={14} />
           BNSS
-        </Link>
+        </Link>*/}
 
         <header className="mb-8">
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#f06f1f]">
@@ -28,14 +28,14 @@ export default function BnssChaptersPage() {
 
           <div className="mt-3 h-[2px] w-12 bg-[#f06f1f]" />
 
-          <p className="mt-4 max-w-2xl text-sm leading-6 text-[#687269]">
-            Explore all 39 chapters of the Bharatiya Nagarik Suraksha
+          {/*<p className="mt-4 max-w-2xl text-sm leading-6 text-[#687269]">
+            The all 39 chapters of the Bharatiya Nagarik Suraksha
             Sanhita, 2023, from preliminary provisions to miscellaneous
             provisions.
-          </p>
+          </p>*/}
         </header>
 
-        <div className="mb-6 flex items-center justify-between border-y border-[#e2dbcf] py-3">
+        {/*<div className="mb-6 flex items-center justify-between border-y border-[#e2dbcf] py-3">
           <span className="text-xs text-[#69736b]">
             Complete arrangement
           </span>
@@ -43,7 +43,7 @@ export default function BnssChaptersPage() {
           <span className="font-serif text-sm text-[#0b7339]">
             39 Chapters
           </span>
-        </div>
+        </div>*/}
 
         <div className="grid gap-2.5 md:grid-cols-2">
           {bnssChapters.map((chapter) => (
