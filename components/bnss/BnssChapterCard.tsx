@@ -20,7 +20,7 @@ export function BnssChapterCard({
       {/* Chapter number */}
       <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#fff0df]">
         <span className="font-serif text-[23px] font-semibold text-[#f36f21]">
-          {chapter.roman}
+          {chapter.number}
         </span>
       </div>
 
