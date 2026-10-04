@@ -41,8 +41,8 @@ export function BnsHero() {
 
           <p className="mt-4 max-w-[360px] text-[13px] leading-6 text-[#77736e] sm:text-[14px]">
             The principal law relating to offences and punishments in India.
-          </p>
-        </div>*/}
+          </p>*/}
+        </div>
 
         {/* SOFT BACKGROUND CIRCLE */}
         <div
