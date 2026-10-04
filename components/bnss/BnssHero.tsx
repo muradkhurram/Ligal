@@ -95,7 +95,7 @@ export function BnssHero() {
             sm:hidden
           "
         >
-          <div className="w-[285px]">
+          <div className="w-[92vw] max-w-[420px]">
             <Image
               src="/images/bnss/bnss-hero.png"
               alt="Bharatiya Nagarik Suraksha Sanhita"
