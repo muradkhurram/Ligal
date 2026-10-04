@@ -1,9 +1,9 @@
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import type { BnssChapter } from "@/data/bnss/chapters"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import type { BnssChapter } from "@/data/bnss/chapters";
 
 interface BnssChapterCardProps {
-  chapter: BnssChapter
+  chapter: BnssChapter;
 }
 
 export function BnssChapterCard({
@@ -12,38 +12,38 @@ export function BnssChapterCard({
   return (
     <Link
       href={`/bnss/chapter/${chapter.number}`}
-      className="group block"
+      className="group relative flex min-h-[90px] items-center overflow-hidden rounded-[18px] border border-[#e8e1d8] bg-white px-6 py-5 transition-shadow duration-200 hover:shadow-md"
     >
-      <article className="relative overflow-hidden rounded-xl border border-[#e5ddd1] bg-[#fffdf9] px-4 py-4 shadow-[0_4px_18px_rgba(44,49,42,0.035)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f06f1f]/45 hover:shadow-[0_10px_30px_rgba(44,49,42,0.08)]">
+      {/* Orange left border */}
+      <div className="absolute left-0 top-0 h-full w-[3px] bg-[#f36f21]" />
 
-        {/* Orange line */}
-        <div className="absolute bottom-0 left-0 top-0 w-[2px] bg-[#f06f1f]" />
+      {/* Chapter number */}
+      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#fff0df]">
+        <span className="font-serif text-[23px] font-semibold text-[#f36f21]">
+          {chapter.roman}
+        </span>
+      </div>
 
-        <div className="flex items-center gap-3">
+      {/* Divider */}
+      <div className="mx-5 h-12 w-px bg-[#e5dfd7]" />
 
-          {/* Roman numeral */}
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#fff0dc] font-serif text-base text-[#f06f1f]">
-            {chapter.roman}
-          </div>
+      {/* Text */}
+      <div className="min-w-0 flex-1">
+        <h3 className="font-serif text-[19px] font-semibold leading-tight text-[#123f32]">
+          {chapter.title}
+        </h3>
 
-          {/* Content */}
-          <div className="min-w-0 flex-1 border-l border-[#eee4d6] pl-3">
-            <p className="font-serif text-[13px] font-semibold leading-snug text-[#173b28]">
-              {chapter.title}
-            </p>
+        <p className="mt-1 text-[13px] text-[#77736e]">
+          Sections {chapter.sectionStart}–{chapter.sectionEnd}
+        </p>
+      </div>
 
-            <p className="mt-1 text-[9px] uppercase tracking-[0.08em] text-[#8a9189]">
-              Sections {chapter.sectionStart}–{chapter.sectionEnd}
-            </p>
-          </div>
-
-          {/* Arrow */}
-          <ArrowRight
-            size={15}
-            className="shrink-0 text-[#f06f1f] transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </div>
-      </article>
+      {/* Arrow */}
+      <ArrowRight
+        size={19}
+        strokeWidth={1.6}
+        className="ml-4 shrink-0 text-[#f36f21] transition-transform duration-200 group-hover:translate-x-1"
+      />
     </Link>
-  )
+  );
 }

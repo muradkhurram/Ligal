@@ -1,10 +1,10 @@
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { bnssChapters } from "@/data/bnss/chapters"
-import { BnssChapterCard } from "./BnssChapterCard"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { bnssChapters } from "@/data/bnss/chapters";
+import { BnssChapterCard } from "./BnssChapterCard";
 
 export function BnssChapters() {
-  const featuredChapters = bnssChapters.slice(0, 5)
+  const featuredChapters = bnssChapters.slice(0, 5);
 
   return (
     <section className="px-4 py-12 sm:px-6 sm:py-16">
@@ -25,6 +25,7 @@ export function BnssChapters() {
             className="group flex items-center gap-1 text-[10px] font-medium text-[#f06f1f]"
           >
             View All
+
             <ArrowRight
               size={12}
               className="transition-transform group-hover:translate-x-1"
@@ -44,5 +45,5 @@ export function BnssChapters() {
 
       </div>
     </section>
-  )
+  );
 }

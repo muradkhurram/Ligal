@@ -1,6 +1,7 @@
-import { BnssHero } from "@/components/bnss/BnssHero"
-import { BnssChapters } from "@/components/bnss/BnssChapters"
-import { BnssSchedule } from "@/components/bnss/BnssSchedule"
+import { BnssHero } from "@/components/bnss/BnssHero";
+import { BnssChapters } from "@/components/bnss/BnssChapters";
+import { BnssSchedule } from "@/components/bnss/BnssSchedule";
+import  BottomNavigation  from "@/components/navigation/BottomNavigation";
 
 export default function BnssPage() {
   return (
@@ -12,6 +13,8 @@ export default function BnssPage() {
 
       <BnssSchedule />
 
+      <BottomNavigation />
+
     </main>
-  )
+  );
 }
