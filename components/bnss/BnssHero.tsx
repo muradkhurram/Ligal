@@ -75,7 +75,7 @@ export function BnssHero() {
           "
         >
           <Image
-            src="/images/bnss/bnss-hero.jpg"
+            src="/images/bnss/bnss-hero.png"
             alt="Bharatiya Nagarik Suraksha Sanhita"
             width={885}
             height={432}
@@ -97,7 +97,7 @@ export function BnssHero() {
         >
           <div className="w-[285px]">
             <Image
-              src="/images/bnss/bnss-hero.jpg"
+              src="/images/bnss/bnss-hero.png"
               alt="Bharatiya Nagarik Suraksha Sanhita"
               width={885}
               height={432}
