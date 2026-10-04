@@ -35,14 +35,14 @@ export function BnsHero() {
             Nyaya Sanhita
           </h1>
 
-          <p className="mt-5 font-serif text-[25px] text-[#59666b] sm:text-[28px]">
+          {/*<p className="mt-5 font-serif text-[25px] text-[#59666b] sm:text-[28px]">
             2023
           </p>
 
           <p className="mt-4 max-w-[360px] text-[13px] leading-6 text-[#77736e] sm:text-[14px]">
             The principal law relating to offences and punishments in India.
           </p>
-        </div>
+        </div>*/}
 
         {/* SOFT BACKGROUND CIRCLE */}
         <div
