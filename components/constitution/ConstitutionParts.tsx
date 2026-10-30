@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
-import { constitutionParts } from "@/data/constitution/parts";
+import {
+  constitutionParts,
+  constitutionSchedules,
+} from "@/data/constitution/parts";
 import { ConstitutionPartCard } from "./ConstitutionPartCard";
 
 const schedules = [
@@ -65,7 +68,7 @@ export function ConstitutionParts() {
 
       {/* Constitution Parts */}
       <div className="space-y-3">
-        {constitutionParts.map((part) => (
+        {constitutionParts.slice(0, 5).map((part) => (
           <ConstitutionPartCard
             key={part.slug}
             part={part}
@@ -98,7 +101,7 @@ export function ConstitutionParts() {
 
       {/* Schedules */}
       <div className="space-y-3">
-        {schedules.map((schedule) => (
+        {constitutionSchedules.slice(0, 5).map((schedule) => (
           <Link
             key={schedule.slug}
             href={`/constitution/schedules/${schedule.slug}`}
