@@ -1,0 +1,72 @@
+export const article3 = {
+  number: "3",
+  title:
+    "Formation of new States and alteration of areas, boundaries or names of existing States",
+  href: "/constitution/articles/3",
+};
+
+export default function Article3() {
+  return (
+    <article>
+      <h2>
+        3. Formation of new States and alteration of areas,
+        boundaries or names of existing States.—
+      </h2>
+
+      <p>Parliament may by law—</p>
+
+      <div className="pl-5 space-y-3">
+        <p>
+          (a) form a new State by separation of territory
+          from any State or by uniting two or more States or
+          parts of States or by uniting any territory to a
+          part of any State;
+        </p>
+
+        <p>
+          (b) increase the area of any State;
+        </p>
+
+        <p>
+          (c) diminish the area of any State;
+        </p>
+
+        <p>
+          (d) alter the boundaries of any State;
+        </p>
+
+        <p>
+          (e) alter the name of any State:
+        </p>
+      </div>
+
+      <p className="mt-4">
+        Provided that no Bill for the purpose shall be
+        introduced in either House of Parliament except on
+        the recommendation of the President and unless,
+        where the proposal contained in the Bill affects
+        the area, boundaries or name of any of the States
+        ***, the Bill has been referred by the President to
+        the Legislature of that State for expressing its
+        views thereon within such period as may be specified
+        in the reference or within such further period as
+        the President may allow and the period so specified
+        or allowed has expired.
+      </p>
+
+      <p className="mt-4">
+        Explanation I.—In this article, in clauses (a) to
+        (e), "State" includes a Union territory, but in the
+        proviso, "State" does not include a Union territory.
+      </p>
+
+      <p className="mt-3">
+        Explanation II.—The power conferred on Parliament
+        by clause (a) includes the power to form a new State
+        or Union territory by uniting a part of any State or
+        Union territory to any other State or Union
+        territory.
+      </p>
+    </article>
+  );
+}

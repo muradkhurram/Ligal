@@ -1,0 +1,19 @@
+export const article2 = {
+  number: "2",
+  title: "Admission or establishment of new States",
+  href: "/constitution/articles/2",
+};
+
+export default function Article2() {
+  return (
+    <article>
+      <h2>2. Admission or establishment of new States.—</h2>
+
+      <p>
+        Parliament may by law admit into the Union, or
+        establish, new States on such terms and conditions
+        as it thinks fit.
+      </p>
+    </article>
+  );
+}
