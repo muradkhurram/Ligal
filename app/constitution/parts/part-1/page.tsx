@@ -1,6 +1,5 @@
 
 import Link from "next/link";
-
 import { ChevronRight } from "lucide-react";
 
 import BottomNavigation from "@/components/navigation/BottomNavigation";
@@ -21,7 +20,7 @@ export default function PartOnePage() {
   return (
     <main className="min-h-screen bg-[#fffaf3] pb-36 text-[#103b2c]">
 
-      <div className="mx-auto w-full max-w-5xl px-5 pt-5 sm:px-8">
+      <div className="mx-auto w-full max-w-5xl px-5 pt-[164px] sm:px-8">
 
         {/* Part header */}
         <section className="relative overflow-hidden rounded-[24px] border border-[#eadfd2] bg-white p-5 shadow-sm sm:p-7">
@@ -46,11 +45,13 @@ export default function PartOnePage() {
         <section className="mt-9">
 
           <div className="mb-5">
+
             <h2 className="font-serif text-3xl font-bold text-[#103b2c]">
               Articles
             </h2>
 
             <div className="mt-2 h-1 w-12 rounded-full bg-[#ed6817]" />
+
           </div>
 
           {/* Article cards */}
@@ -86,7 +87,7 @@ export default function PartOnePage() {
 
                 </div>
 
-                {/* Article navigation arrow */}
+                {/* Navigation arrow */}
                 <ChevronRight
                   size={23}
                   className="shrink-0 text-[#ed6817] transition-transform group-hover:translate-x-1"
