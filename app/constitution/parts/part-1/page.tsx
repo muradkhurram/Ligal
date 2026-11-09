@@ -20,7 +20,7 @@ export default function PartOnePage() {
   return (
     <main className="min-h-screen bg-[#fffaf3] pb-36 text-[#103b2c]">
 
-      <div className="mx-auto w-full max-w-5xl px-5 pt-[164px] sm:px-8">
+      <div className="mx-auto w-full max-w-5xl px-5 pt-[120px] sm:px-8">
 
         {/* Part header */}
         <section className="relative overflow-hidden rounded-[24px] border border-[#eadfd2] bg-white p-5 shadow-sm sm:p-7">
