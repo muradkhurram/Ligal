@@ -1,10 +1,7 @@
 
 import Link from "next/link";
 
-{/*import {
-  ArrowLeft,
-  ChevronRight,
-} from "lucide-react";*/}
+import { ChevronRight } from "lucide-react";
 
 import BottomNavigation from "@/components/navigation/BottomNavigation";
 
@@ -26,17 +23,8 @@ export default function PartOnePage() {
 
       <div className="mx-auto w-full max-w-5xl px-5 pt-5 sm:px-8">
 
-        {/* Back navigation */}
-        {/*<Link
-          href="/constitution/parts"
-          aria-label="Back to all Constitution Parts"
-          className="mb-7 inline-flex h-11 w-11 items-center justify-center border border-[#eadfd2] bg-white text-[#103b2c] transition hover:bg-[#fff0df]"
-        >
-          <ArrowLeft size={21} />
-        </Link>*/}
-
-        {/* Part heading */}
-        <section className="relative border border-[#eadfd2] bg-white p-5 shadow-sm sm:p-7">
+        {/* Part header */}
+        <section className="relative overflow-hidden rounded-[24px] border border-[#eadfd2] bg-white p-5 shadow-sm sm:p-7">
 
           <div className="absolute inset-y-0 left-0 w-2 bg-[#ed6817]" />
 
@@ -46,29 +34,23 @@ export default function PartOnePage() {
               Part I – The Union and its Territory
             </h1>
 
-            <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-[#737c76] sm:text-base">
-
+            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-semibold text-[#737c76] sm:text-base">
               <span>Articles 1–4</span>
-
               <span>4 Articles</span>
-
             </div>
 
           </div>
-
         </section>
 
-        {/* Articles heading */}
+        {/* Articles section */}
         <section className="mt-9">
 
           <div className="mb-5">
-
             <h2 className="font-serif text-3xl font-bold text-[#103b2c]">
               Articles
             </h2>
 
-            <div className="mt-2 h-1 w-12 bg-[#ed6817]" />
-
+            <div className="mt-2 h-1 w-12 rounded-full bg-[#ed6817]" />
           </div>
 
           {/* Article cards */}
@@ -79,11 +61,11 @@ export default function PartOnePage() {
               <Link
                 key={article.number}
                 href={article.href}
-                className="group flex min-h-[112px] items-center gap-4 border border-[#eadfd2] bg-white p-3 shadow-sm transition duration-200 hover:border-[#ed6817]/50 hover:shadow-md sm:gap-5 sm:p-4"
+                className="group flex min-h-[112px] items-center gap-4 overflow-hidden rounded-[18px] border border-[#eadfd2] bg-white p-3 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#ed6817]/50 hover:shadow-md sm:gap-5 sm:p-4"
               >
 
                 {/* Article number */}
-                <div className="flex h-[76px] w-[76px] shrink-0 items-center justify-center border border-[#f2e4d1] bg-[#fff0df] sm:h-[82px] sm:w-[82px]">
+                <div className="flex h-[76px] w-[76px] shrink-0 items-center justify-center rounded-[16px] bg-[#fff0df] sm:h-[82px] sm:w-[82px]">
 
                   <span className="font-serif text-3xl text-[#ed6817] sm:text-4xl">
                     {article.number}
@@ -104,18 +86,17 @@ export default function PartOnePage() {
 
                 </div>
 
-                {/* Navigation arrow */}
-                {/*<ChevronRight
+                {/* Article navigation arrow */}
+                <ChevronRight
                   size={23}
                   className="shrink-0 text-[#ed6817] transition-transform group-hover:translate-x-1"
-                />*/}
+                />
 
               </Link>
 
             ))}
 
           </div>
-
         </section>
 
       </div>
