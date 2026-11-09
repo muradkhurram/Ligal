@@ -11,7 +11,7 @@ export const constitutionParts: ConstitutionPart[] = [
     roman: "I",
     title: "The Union and its Territory",
     articles: "Articles 1–4",
-    slug: "part-i",
+    slug: "part-1",
   },
   {
     roman: "II",
